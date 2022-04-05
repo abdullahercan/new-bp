@@ -1,51 +1,55 @@
 {
-  "name": "new-bp",
-  "version": "1.0.0",
-  "description": "This project was bootstrapped with Fastify-CLI.",
-  "main": "app.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "start": "cross-env NODE_ENV=production && node build/src/main.js",
-    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
-    "clean": "rimraf coverage build tmp",
-    "prebuild": "npm run lint",
-    "build": "tsc -p tsconfig.json",
-    "build:watch": "tsc -w -p tsconfig.json",
-    "build:release": "npm run clean && tsc -p tsconfig.release.json",
-    "lint": "eslint . --ext .ts",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "fastify": "^3.0.0",
-    "fastify-autoload": "^3.10.0",
-    "fastify-cli": "^2.15.0",
-    "fastify-env": "^2.1.1",
-    "fastify-plugin": "^3.0.0",
-    "fastify-sensible": "^3.1.2",
-    "fastify-typeorm-plugin": "^2.2.0",
-    "pg": "^8.7.3"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.23",
-    "@typescript-eslint/eslint-plugin": "^5.18.0",
-    "@typescript-eslint/parser": "^5.18.0",
-    "eslint": "^8.12.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jest": "^26.1.3",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.5.1",
-    "nodemon": "^2.0.15",
-    "prettier": "^2.6.2",
-    "rimraf": "^3.0.2",
-    "tap": "^15.1.6",
-    "ts-jest": "^27.1.4",
-    "ts-node": "^10.7.0",
-    "typescript": "^4.6.3"
-  }
+   "name": "new-bp",
+   "version": "1.0.0",
+   "description": "This project was bootstrapped with Fastify-CLI.",
+   "main": "app.js",
+   "directories": {
+      "test": "test"
+   },
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
+      "clean": "rimraf coverage build tmp",
+      "prebuild": "npm run lint",
+      "build": "tsc -p tsconfig.json",
+      "build:watch": "tsc -w -p tsconfig.json",
+      "build:release": "npm run clean && tsc -p tsconfig.release.json",
+      "lint": "eslint . --ext .ts",
+      "test": "jest --coverage",
+      "test:watch": "jest --watch",
+      "typeorm": "typeorm --config ormconfig.json"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "dotenv": "^16.0.0",
+      "fastify": "^3.0.0",
+      "fastify-autoload": "^3.10.0",
+      "fastify-cli": "^2.15.0",
+      "fastify-env": "^2.1.1",
+      "fastify-plugin": "^3.0.0",
+      "fastify-sensible": "^3.1.2",
+      "fastify-typeorm-plugin": "^2.2.0",
+      "pg": "^8.4.0",
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "0.3.4"
+   },
+   "devDependencies": {
+      "@types/node": "^16.11.10",
+      "@typescript-eslint/eslint-plugin": "^5.18.0",
+      "@typescript-eslint/parser": "^5.18.0",
+      "eslint": "^8.12.0",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-plugin-jest": "^26.1.3",
+      "eslint-plugin-prettier": "^4.0.0",
+      "jest": "^27.5.1",
+      "nodemon": "^2.0.15",
+      "prettier": "^2.6.2",
+      "rimraf": "^3.0.2",
+      "tap": "^15.1.6",
+      "ts-jest": "^27.1.4",
+      "ts-node": "10.4.0",
+      "typescript": "4.5.2"
+   }
 }
